@@ -1,0 +1,33 @@
+.header{
+    margin: 45px 0 40px;
+}
+
+.header__image{
+    max-width: 173px;
+}
+
+.header__divider{
+    display: flex;
+}
+
+.header__divider_line{
+    border-bottom: 1px solid #545454;
+    flex-grow: 1;
+    margin-top: 41px;
+}
+
+@media screen and (max-width:480px) {
+    .header{
+        max-width: 320px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .header__image{
+        width: 126px;
+        margin: 28px 27px 32px;
+    }
+    .header__divider{
+        width: 320px;
+    }
+}
