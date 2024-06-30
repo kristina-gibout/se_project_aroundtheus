@@ -11,3 +11,4 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Flat BEM file structure
 - Grid
 [https://github.com/kristina-gibout/se_project_aroundtheus]
+[https://kristina-gibout.github.io/se_project_aroundtheus/]
