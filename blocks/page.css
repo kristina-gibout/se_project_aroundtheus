@@ -20,9 +20,13 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 621px) {
-  .page__content {
-    padding: 0;
+@media screen and (max-width: 600px) {
+  .page__content{
+    padding: 0 19px;
+  }
+  
+  .page__section {
+    margin: 0;   
   }
 }
 
