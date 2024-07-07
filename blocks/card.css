@@ -28,6 +28,7 @@
   line-height: 29px;
   font-weight: 900;
   margin: 0;
+  max-width: 220px;
 }
 
 .card__like-button {
