@@ -21,14 +21,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .page__content{
-    padding: 0 19px;
-  }
-  
-  .page__section {
-    margin: 0; 
-    max-width: 282px;  
-  }
+.page__content{
+  padding: 0;
+}
 }
 
 
