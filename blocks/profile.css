@@ -77,11 +77,6 @@
 }
 
 @media screen and (max-width: 918px) {
-  .profile__info {
-    grid-template-columns: auto;
-    
-  }
-
   .profile__title {
     max-width: 340px;
     font-size: 32px;
@@ -90,10 +85,6 @@
 
   .profile__image {
     margin: 0 10px 0 0;
-  }
-
-  .profile__add-button{
-    margin-left: auto;
   }
 }
 
