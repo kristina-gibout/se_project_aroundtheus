@@ -24,4 +24,11 @@ const initialCards = [
     link:"https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg"
 }
 ]
-console.log(initialCards)
+
+const profileEditBtn = document.querySelector(".profile__edit-button");
+const profileModal = document.querySelector(".modal");
+const modalCloseBtn = document.querySelector(".modal__close");
+
+profileEditBtn.addEventListener("click", () => {
+profileModal.classList.add(modal_opened)
+})
