@@ -38,7 +38,7 @@
         <p class="footer__copyright">©2024 Around the US</p>
       </footer>
     </div>
-    <div class="modal">
+    <div class="modal" id="profile-modal">
       <div class="modal__container">
         <button class="modal__close" type="button"></button>
         <p class="modal__heading">Edit Profile</p>
@@ -49,6 +49,26 @@
         </form>
       </div>
     </div>
+  <div class="modal" id="card-modal">
+    <div class="modal__container">
+      <button class="modal__close" type="button"></button>
+      <p class="modal__heading">New Place</p>
+      <form class="modal__form" id="card-add-form">
+        <input type="text" name="title" value="Title" class="modal__input" id="card-title-input">
+        <input type="text" name="card-image" value="Image Link" class="modal__input" id="card-image-input">
+        <button class="modal__button" type="submit">Create</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="preview-image-modal">
+    <div class="modal__image-container">
+      <img src="" alt="" class="modal__image">
+      <p class="modal__title" id="card-title"></p>
+      <button class="modal__close" type="button"></button>
+    </div>
+  </div>
+
+
     <template id="card-template">
       <li class="card">
         <img
@@ -56,12 +76,12 @@
           alt=""
           class="card__image"
         />
+        <button type="button" class="card__remove-button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
-
     </template>
     <script src="./scripts/index.js"></script>
   </body>
