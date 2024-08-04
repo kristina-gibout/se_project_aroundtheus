@@ -32,14 +32,14 @@ const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector(`#profile-title-input`);
 const profileDescriptionInput =document.querySelector("#profile-description-input");
-const profileEditForm = profileModal.querySelector("#profile-edit-form");
+const profileEditForm = document.forms["profile-form"];
 
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector('#card-template').content.firstElementChild;
 const cardAddBtn = document.querySelector(".profile__add-button");
 const cardModal = document.querySelector('#card-modal');
 const cardModalCloseBtn = cardModal.querySelector(".modal__close");
-const cardAddForm = cardModal.querySelector('#card-add-form');
+const cardAddForm = document.forms['card-form'];
 const cardTitleInput = cardAddForm.querySelector(`#card-title-input`);
 const cardImageInput =cardAddForm.querySelector('#card-image-input');
 
@@ -69,11 +69,12 @@ function handleProfileEditSubmit(e){
     closeModal(profileModal);
 }
 
-function handleaddCardSubmit(e){
+function handleAddCardSubmit(e){
     e.preventDefault();
     const name = cardTitleInput.value
     const link = cardImageInput.value
     renderCard({name, link}, cardListEl)
+    cardAddForm.reset()
     closeModal(cardModal);
 }
 
@@ -97,6 +98,7 @@ function getCardElement(cardData){
         openModal(previewModal),
         previewModalImage.src = cardData.link,
         previewModalImage.alt = cardData.name
+        previewModalTitle.textContent = cardData.name
       });
 
     cardImageEl.src = cardData.link;
@@ -120,7 +122,7 @@ cardAddBtn.addEventListener("click", ()=> openModal(cardModal))
 
 cardModalCloseBtn.addEventListener("click", ()=> closeModal(cardModal))
 
-cardAddForm.addEventListener("submit", handleaddCardSubmit)
+cardAddForm.addEventListener("submit", handleAddCardSubmit)
 
 previewModalClose.addEventListener("click", ()=> closeModal(previewModal))
 
