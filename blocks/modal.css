@@ -8,14 +8,17 @@
     background-color: rgba(0, 0, 0, .5);
     color: #000;
     visibility: hidden;
-    transition: visibility 0s 0.6s, opacity 0.6s;
+    opacity: 0;
+    transition: visibility 0s 0.6s, opacity 0.6s ease;
+    pointer-events: none;
+    display: flex;
 }
 
 .modal_opened{
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s, opacity 0.6s;
-    display: flex;
+    transition: visibility 0s 0.6s, opacity 0.6s ease;
+    pointer-events: all;
 }
 
 .modal__container{
