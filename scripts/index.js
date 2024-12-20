@@ -48,13 +48,27 @@ const previewModalImage = previewModal.querySelector('.modal__image');
 const previewModalTitle = previewModal.querySelector(".modal__title");
 const previewModalClose = previewModal.querySelector(".modal__close");
 
+const modals = document.querySelectorAll(".modal");
+
 function openModal(modal){
     modal.classList.add("modal_opened");
+    document.addEventListener("keydown",escapeEvent)
 }
 
 function closeModal(modal){
     modal.classList.remove("modal_opened");
+    document.removeEventListener("keydown", escapeEvent)
 }
+
+function handleModalClose(event){
+    if (event.target.classList.contains("modal")|| event.target.classList.contains("modal__close")){
+        closeModal(event.currentTarget)
+    }
+}
+
+modals.forEach((modal)=> {
+    modal.addEventListener("click", handleModalClose)
+} )
 
 function renderCard(cardData, wrapper){
     const cardElement = getCardElement(cardData);
@@ -108,23 +122,22 @@ function getCardElement(cardData){
     return cardElement;
 }
 
+function escapeEvent(evt){
+const currentModal= document.querySelector(".modal_opened")
+if (evt.key === "Escape"){closeModal(currentModal)}
+}
+
 profileEditBtn.addEventListener("click", () =>{
     profileTitleInput.value = profileTitle.textContent;
     profileDescriptionInput.value = profileDescription.textContent;
     openModal(profileModal);
 });
 
-profileModalCloseBtn.addEventListener("click", ()=> closeModal(profileModal))
-
 profileEditForm.addEventListener("submit", handleProfileEditSubmit)
 
 cardAddBtn.addEventListener("click", ()=> openModal(cardModal))
 
-cardModalCloseBtn.addEventListener("click", ()=> closeModal(cardModal))
-
 cardAddForm.addEventListener("submit", handleAddCardSubmit)
-
-previewModalClose.addEventListener("click", ()=> closeModal(previewModal))
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl))
 
