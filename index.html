@@ -43,10 +43,14 @@
         <button class="modal__close" type="button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form" id="profile-form">
-          <input required minlength="2" maxlength="40" type="text" name="title" value="" class="modal__input" id="profile-title-input">
+          <label class="modal__label"> 
+          <input required minlength="2" maxlength="40" type="text" name="title" placeholder="" class="modal__input" id="profile-title-input">
           <span class="modal__error" id="profile-title-input-error"></span>
-          <input required minlength="2" maxlength="200" type="text" name="" value="Explorer" class="modal__input" id="profile-description-input">
+          </label>
+          <label class="modal__label">
+          <input required minlength="2" maxlength="200" type="text" name="" placeholder="Explorer" class="modal__input" id="profile-description-input">
           <span class="modal__error" id="profile-description-input-error"></span>
+          </label>
           <button class="modal__button" type="submit">Save</button>
         </form>
       </div>
@@ -56,10 +60,14 @@
       <button class="modal__close" type="button"></button>
       <p class="modal__heading">New Place</p>
       <form class="modal__form" id="card-form">
-        <input required minlength="1" maxlength="30" type="text" name="title" value="" class="modal__input" id="card-title-input">
+        <label class="modal__label">
+        <input required minlength="1" maxlength="30" type="text" name="title" placeholder="" class="modal__input" id="card-title-input">
         <span class="modal__error" id="card-title-input-error"></span>
-        <input required type="text" name="card-image" value="" class="modal__input" id="card-image-input">
+        </label>
+        <label class="modal__label">
+        <input required type="url" name="card-image" placeholder="" class="modal__input" id="card-image-input">
         <span class="modal__error" id="card-image-input-error"></span>
+        </label>
         <button class="modal__button modal__button_disabled" disabled type="submit">Create</button>
       </form>
     </div>
