@@ -30,8 +30,7 @@
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="cards page__section">
-          <ul class="cards__list">
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -43,51 +42,89 @@
         <button class="modal__close" type="button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form" id="profile-form">
-          <label class="modal__label"> 
-          <input required minlength="2" maxlength="40" type="text" name="title" placeholder="" class="modal__input" id="profile-title-input">
-          <span class="modal__error" id="profile-title-input-error"></span>
+          <label class="modal__label">
+            <input
+              required
+              minlength="2"
+              maxlength="40"
+              type="text"
+              name="title"
+              placeholder=""
+              class="modal__input"
+              id="profile-title-input"
+            />
+            <span class="modal__error" id="profile-title-input-error"></span>
           </label>
           <label class="modal__label">
-          <input required minlength="2" maxlength="200" type="text" name="" placeholder="Explorer" class="modal__input" id="profile-description-input">
-          <span class="modal__error" id="profile-description-input-error"></span>
+            <input
+              required
+              minlength="2"
+              maxlength="200"
+              type="text"
+              name="description"
+              placeholder="Explorer"
+              class="modal__input"
+              id="profile-description-input"
+            />
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
           </label>
           <button class="modal__button" type="submit">Save</button>
         </form>
       </div>
     </div>
-  <div class="modal" id="card-modal">
-    <div class="modal__container">
-      <button class="modal__close" type="button"></button>
-      <p class="modal__heading">New Place</p>
-      <form class="modal__form" id="card-form">
-        <label class="modal__label">
-        <input required minlength="1" maxlength="30" type="text" name="title" placeholder="" class="modal__input" id="card-title-input">
-        <span class="modal__error" id="card-title-input-error"></span>
-        </label>
-        <label class="modal__label">
-        <input required type="url" name="card-image" placeholder="" class="modal__input" id="card-image-input">
-        <span class="modal__error" id="card-image-input-error"></span>
-        </label>
-        <button class="modal__button modal__button_disabled" disabled type="submit">Create</button>
-      </form>
+    <div class="modal" id="card-modal">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" id="card-form">
+          <label class="modal__label">
+            <input
+              required
+              minlength="1"
+              maxlength="30"
+              type="text"
+              name="title"
+              placeholder=""
+              class="modal__input"
+              id="card-title-input"
+            />
+            <span class="modal__error" id="card-title-input-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              required
+              type="url"
+              name="card-image"
+              placeholder=""
+              class="modal__input"
+              id="card-image-input"
+            />
+            <span class="modal__error" id="card-image-input-error"></span>
+          </label>
+          <button
+            class="modal__button modal__button_disabled"
+            disabled
+            type="submit"
+          >
+            Create
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-  <div class="modal" id="preview-image-modal">
-    <div class="modal__image-container">
-      <button class="modal__close" type="button"></button>  
-      <img src="" alt="" class="modal__image">
-      <p class="modal__title" id="card-title"></p>
+    <div class="modal" id="preview-image-modal">
+      <div class="modal__image-container">
+        <button class="modal__close" type="button"></button>
+        <img src="" alt="" class="modal__image" />
+        <p class="modal__title" id="card-title"></p>
+      </div>
     </div>
-  </div>
-
 
     <template id="card-template">
       <li class="card">
-        <img
-          src=""
-          alt=""
-          class="card__image"
-        />
+        <img src="" alt="" class="card__image" />
         <button type="button" class="card__remove-button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
